@@ -10,12 +10,14 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     var appState = context.watch<MyAppState>();
 
-    return Scaffold(
-      body: Column(
-        children: [
-          const Text('A random idea.'),
-          Text(appState.current.asUpperCase)
-        ],
+    return SafeArea(
+      child: Scaffold(
+        body: Column(
+          children: [
+            const Text('A random idea.'),
+            Text(appState.current.asUpperCase)
+          ],
+        ),
       ),
     );
   }
