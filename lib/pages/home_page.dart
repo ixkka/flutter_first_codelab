@@ -14,8 +14,12 @@ class HomePage extends StatelessWidget {
       child: Scaffold(
         body: Column(
           children: [
-            const Text('A random idea.'),
-            Text(appState.current.asUpperCase)
+            const Text('A random idea:'),
+            Text(appState.current.asUpperCase),
+            ElevatedButton(
+              onPressed: () => debugPrint('next button pressed'),
+              child: const Text('Next'),
+            ),
           ],
         ),
       ),
